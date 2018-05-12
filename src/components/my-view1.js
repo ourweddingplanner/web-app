@@ -11,6 +11,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 import { html } from '@polymer/lit-element';
 import { SharedStyles } from './shared-styles.js';
 import { PageViewElement } from './page-view-element.js';
+import {Icon} from "@material/mwc-icon"
+import {Switch} from "@material/mwc-switch"
 
 class MyView1 extends PageViewElement {
   _render(props) {
@@ -20,6 +22,8 @@ class MyView1 extends PageViewElement {
         <h2>Static page</h2>
         <p>This is a text-only page.</p>
         <p>It doesn't do anything other than display some static text.</p>
+        <mwc-icon>sentiment_very_satisfied</mwc-icon>
+        <mwc-switch>sentiment_very_satisfied</mwc-switch>
       </section>
       <section>
         <h2>Welcome</h2>
