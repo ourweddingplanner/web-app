@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "downlevelIteration": true,
+    "jsx": "react",
+    "lib": ["esnext"],
+    "module": "es6",
+    "noImplicitAny": true,
+    "outDir": "./dist/",
+    "target": "es5"
+  },
+  "exclude": ["build", "cfn", "coverage", "docker", "node_modules"],
+  "include": ["src"]
+}

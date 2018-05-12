@@ -1,0 +1,8 @@
+.idea
+.vscode
+build
+cfn
+coverage
+dist
+docker
+node_modules
