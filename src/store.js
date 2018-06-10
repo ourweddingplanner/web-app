@@ -9,6 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 
 import { createStore, compose as origCompose, applyMiddleware, combineReducers } from 'redux';
+// import { autoRehydrate, persistStore } from 'redux-persist';
 import thunk from 'redux-thunk';
 import { lazyReducerEnhancer } from 'pwa-helpers/lazy-reducer-enhancer.js';
 
@@ -22,11 +23,17 @@ const compose = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || origCompose;
 // lazily add reducers after the store has been created) and redux-thunk (so
 // that you can dispatch async actions). See the "Redux and state management"
 // section of the wiki for more details:
-// https://github.com/Polymer/pwa-starter-kit/wiki/4.-Redux-and-state-management
+// https://github.com/ourweddingplanner/web-app/wiki/4.-Redux-and-state-management
 export const store = createStore(
   (state, action) => state,
-  compose(lazyReducerEnhancer(combineReducers), applyMiddleware(thunk))
+  compose(
+    lazyReducerEnhancer(combineReducers),
+    applyMiddleware(thunk)
+    // autoRehydrate()
+  )
 );
+
+// persistStore(store);
 
 // Initially loaded reducers.
 store.addReducers({

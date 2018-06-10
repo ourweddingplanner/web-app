@@ -13,10 +13,11 @@ export const UPDATE_OFFLINE = 'UPDATE_OFFLINE';
 export const UPDATE_DRAWER_STATE = 'UPDATE_DRAWER_STATE';
 export const OPEN_SNACKBAR = 'OPEN_SNACKBAR';
 export const CLOSE_SNACKBAR = 'CLOSE_SNACKBAR';
+export const UPDATE_RESOURCE_LOCATION = 'UPDATE_RESOURCE_LOCATION';
 
 export const navigate = (path) => (dispatch) => {
   // Extract the page name from path.
-  const page = path === '/' ? 'view1' : path.slice(1);
+  const page = path === '/' ? 'home' : path.slice(1);
 
   // Any other info you might want to extract from the path (like page type),
   // you can do here
@@ -28,20 +29,61 @@ export const navigate = (path) => (dispatch) => {
 
 const loadPage = (page) => async (dispatch) => {
   switch(page) {
-    case 'view1':
-      await import('../components/my-view1.js');
+    case 'careers':
+      await import('../components/site-careers.js');
+      break;
+    case 'contact':
+      await import('../components/site-contact.js');
+      break;
+    case 'faq':
+      await import('../components/site-faq.js');
+      break;
+    case 'home':
+      await import('../components/site-home.js');
       // Put code here that you want it to run every time when
-      // navigate to view1 page and my-view1.js is loaded
+      // navigate to home page and site-home.js is loaded
+      break;
+    case 'legal-statement':
+      await import('../components/site-legal-statement.js');
+      break;
+    case 'messenger':
+      await import('../components/site-messenger.js');
+      break;
+    case 'privacy-policy':
+      await import('../components/site-privacy-policy.js');
+      break;
+    case 'store-locator':
+      await import('../components/site-store-locator.js');
+      break;
+    case 'view1':
+      await import('../components/site-view1.js');
       break;
     case 'view2':
-      await import('../components/my-view2.js');
+      await import('../components/site-view2.js');
       break;
     case 'view3':
-      await import('../components/my-view3.js');
+      await import('../components/site-view3.js');
       break;
     default:
-      page = 'view404';
-      await import('../components/my-view404.js');
+      switch (true) {
+        case page.startsWith('test/demo'):
+          page = 'dynamic';
+          await import('../components/site-dynamic.js');
+          break;
+        case page.startsWith('test'):
+          page = 'dynamic';
+          await import('../components/site-dynamic.js');
+          break;
+        case /test/.test(page):
+          page = 'dynamic';
+          await import('../components/site-dynamic.js');
+          break;
+        default:
+          page = 'view404';
+          await import('../components/site-view404.js');
+          break;
+      }
+      break;
   }
 
   dispatch(updatePage(page));
@@ -90,3 +132,18 @@ export const updateDrawerState = (opened) => (dispatch, getState) => {
     });
   }
 }
+
+export const updateResourceLocation = (location) => (dispatch, getState) => {
+  if (getState().app.resourceLocation !== location) {
+    dispatch({
+      type: UPDATE_RESOURCE_LOCATION,
+      location
+    });
+  }
+}
+
+export const getResourceLocation = (pathname) => {
+  const sanitisedPathname = (pathname === "/") ? pathname : pathname.replace(/\/$/, "");
+
+  return `pages?path=${window.decodeURIComponent(sanitisedPathname)}&_embed=aside`
+};

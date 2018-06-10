@@ -14,7 +14,7 @@ import { PageViewElement } from './page-view-element.js';
 import {Icon} from "@material/mwc-icon"
 import {Switch} from "@material/mwc-switch"
 
-class MyView1 extends PageViewElement {
+class SiteView1 extends PageViewElement {
   _render(props) {
     return html`
       ${SharedStyles}
@@ -36,4 +36,4 @@ class MyView1 extends PageViewElement {
   }
 }
 
-window.customElements.define('my-view1', MyView1);
+window.customElements.define('site-view1', SiteView1);

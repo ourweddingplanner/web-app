@@ -1,0 +1,5 @@
+{
+    "/pages/:id/aside": "/:resource/:id/aside",
+    "/posts/:category": "/posts?category=:category",
+    "/messages/:user": "/messages?user=:user"
+  }

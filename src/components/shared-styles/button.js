@@ -13,14 +13,27 @@ import { html } from '@polymer/lit-element';
 export const ButtonSharedStyles = html`
 <style>
   button {
-    font-size: inherit;
-    vertical-align: middle;
     background: transparent;
     border: none;
     cursor: pointer;
+    font-size: inherit;
+    vertical-align: middle;
   }
+
   button:hover svg {
     fill: var(--app-primary-color);
+  }
+
+  button .count {
+    font-weight: lighter;
+  }
+
+  button .count:after {
+    content: ")";
+  }
+
+  button .count:before {
+    content: "(";
   }
 </style>
 `;

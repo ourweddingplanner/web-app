@@ -8,22 +8,29 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { html } from '@polymer/lit-element';
-import { PageViewElement } from './page-view-element.js';
-import { SharedStyles } from './shared-styles.js';
+import { LitElement, html } from '@polymer/lit-element';
 
-class MyView404 extends PageViewElement {
+class ViewFooter extends LitElement {
   _render(props) {
     return html`
-      ${SharedStyles}
-      <section>
-        <h2>Oops! You hit a 404</h2>
-        <p>The page you're looking for doesn't seem to exist. Head back
-           <a href="/">home</a> and try again?
-        </p>
-      </section>
-    `
+      <style>
+      :host {
+        align-items: center;
+        background-color: var(--app-chrome-background-color);
+        display: flex;
+        // flex-basis: 100%;
+        height: 10vh;
+        justify-content: space-around;
+        min-height: 70px;
+      }
+    </style>
+    <slot></slot>
+    `;
   }
+
+  static get properties() { return {
+    active: Boolean,
+  }}
 }
 
-window.customElements.define('my-view404', MyView404);
+window.customElements.define('view-footer', ViewFooter);

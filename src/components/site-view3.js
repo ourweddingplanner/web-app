@@ -11,7 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 import { html } from '@polymer/lit-element';
 import { PageViewElement } from './page-view-element.js';
 import { SharedStyles } from './shared-styles.js';
-import { ButtonSharedStyles } from './button-shared-styles.js';
+import { ButtonSharedStyles } from './shared-styles/button.js';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import './shop-products.js';
 import './shop-cart.js';
@@ -28,7 +28,7 @@ store.addReducers({
   shop
 });
 
-class MyView3 extends connect(store)(PageViewElement) {
+class SiteView3 extends connect(store)(PageViewElement) {
   _render({_quantity, _error}) {
     return html`
       ${SharedStyles}
@@ -91,4 +91,4 @@ class MyView3 extends connect(store)(PageViewElement) {
   }
 }
 
-window.customElements.define('my-view3', MyView3);
+window.customElements.define('site-view3', SiteView3);

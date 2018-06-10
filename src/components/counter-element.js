@@ -9,8 +9,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 
 import { LitElement, html } from '@polymer/lit-element';
-import { plusIcon, minusIcon } from './my-icons.js';
-import { ButtonSharedStyles } from './button-shared-styles.js';
+import { plusIcon, minusIcon } from './site-icons.js';
+import { ButtonSharedStyles } from './shared-styles/button.js';
 
 // This is a reusable element. It is not connected to the store. You can
 // imagine that it could just as well be a third-party element that you

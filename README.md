@@ -1,5 +1,5 @@
-[![Built with pwa–starter–kit](https://img.shields.io/badge/built_with-pwa–starter–kit_-blue.svg)](https://github.com/Polymer/pwa-starter-kit "Built with pwa–starter–kit")
-[![Build status](https://api.travis-ci.org/Polymer/pwa-starter-kit.svg?branch=master)](https://travis-ci.org/Polymer/pwa-starter-kit)
+[![Built with pwa–starter–kit](https://img.shields.io/badge/built_with-pwa–starter–kit_-blue.svg)](https://github.com/ourweddingplanner/web-app "Built with pwa–starter–kit")
+[![Build status](https://api.travis-ci.org/ourweddingplanner/web-app.svg?branch=master)](https://travis-ci.org/ourweddingplanner/web-app)
 
 > ## 🛠 Status: In Development
 > PWA Starter Kit is currently in development. It's on the fast track to a 1.0 release, so we encourage you to use it and give us your feedback, but there are things that haven't been finalized yet and you can expect some changes.
@@ -21,9 +21,9 @@ gives you the following features:
 - unit and integrating testing starting points
 - documentation about other advanced patterns.
 
-### 📖Head over to the [wiki](https://github.com/PolymerLabs/pwa-starter-kit/wiki) for more details!
+### 📖Head over to the [wiki](https://github.com/PolymerLabs/web-app/wiki) for more details!
 
-![pwa-starter-kit screenshot](https://user-images.githubusercontent.com/1369170/39715580-a1be5126-51e2-11e8-8440-96b07be03a3c.png)
+![web-app screenshot](https://user-images.githubusercontent.com/1369170/39715580-a1be5126-51e2-11e8-8440-96b07be03a3c.png)
 
 ## Known issues
 These are high priority and currently being worked on, and they will all be fixed before the 1.0 release:

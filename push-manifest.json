@@ -1,10 +1,10 @@
 {
   "/": {
-    "src/components/my-app.js": {
+    "src/components/site-app.js": {
       "type": "script",
       "weight": 1
     },
-    "src/components/my-view1.js": {
+    "src/components/site-home.js": {
       "type": "script",
       "weight": 1
     },
@@ -13,12 +13,114 @@
       "weight": 1
     }
   },
-  "/view1": {
-    "src/components/my-app.js": {
+  "/careers": {
+    "src/components/site-app.js": {
       "type": "script",
       "weight": 1
     },
-    "src/components/my-view1.js": {
+    "src/components/site-careers.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  },
+  "/contact": {
+    "src/components/site-app.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/components/site-contact.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  },
+  "/faq": {
+    "src/components/site-app.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/components/site-faq.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  },
+  "/home": {
+    "src/components/site-app.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/components/site-home.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  },
+  "/messenger": {
+    "src/components/site-app.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/components/site-messenger.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/components/messenger/messenger-conversation.js": {
+      "type": "script",
+      "weight": 2
+    },
+    "src/components/messenger/messenger-footer.js": {
+      "type": "script",
+      "weight": 2
+    },
+    "src/components/messenger/messenger-header.js": {
+      "type": "script",
+      "weight": 2
+    },
+    "src/components/messenger/messenger-information.js": {
+      "type": "script",
+      "weight": 2
+    },
+    "src/components/messenger/messenger-main-connected.js": {
+      "type": "script",
+      "weight": 2
+    },
+    "src/components/messenger/messenger-main.js": {
+      "type": "script",
+      "weight": 2
+    },
+    "src/components/messenger/messenger-message.js": {
+      "type": "script",
+      "weight": 2
+    },
+    "src/components/messenger/messenger-preview.js": {
+      "type": "script",
+      "weight": 2
+    }
+  },
+  "/view1": {
+    "src/components/site-app.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/components/site-view1.js": {
       "type": "script",
       "weight": 1
     },
@@ -28,11 +130,11 @@
     }
   },
   "/view2": {
-    "src/components/my-app.js": {
+    "src/components/site-app.js": {
       "type": "script",
       "weight": 1
     },
-    "src/components/my-view2.js": {
+    "src/components/site-view2.js": {
       "type": "script",
       "weight": 1
     },
@@ -42,11 +144,11 @@
     }
   },
   "/view3": {
-    "src/components/my-app.js": {
+    "src/components/site-app.js": {
       "type": "script",
       "weight": 1
     },
-    "src/components/my-view3.js": {
+    "src/components/site-view3.js": {
       "type": "script",
       "weight": 1
     },

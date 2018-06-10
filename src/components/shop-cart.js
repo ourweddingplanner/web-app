@@ -17,8 +17,8 @@ import './shop-item.js';
 import { store } from '../store.js';
 import { removeFromCart } from '../actions/shop.js';
 import { cartItemsSelector, cartTotalSelector } from '../reducers/shop.js';
-import { removeFromCartIcon } from './my-icons.js';
-import { ButtonSharedStyles } from './button-shared-styles.js';
+import { removeFromCartIcon } from './site-icons.js';
+import { ButtonSharedStyles } from './shared-styles/button.js';
 
 class ShopCart extends connect(store)(LitElement) {
   _render({_items, _total}) {

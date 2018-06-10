@@ -14,8 +14,8 @@ import { connect } from 'pwa-helpers/connect-mixin.js';
 // This element is connected to the redux store.
 import { store } from '../store.js';
 import { getAllProducts, addToCart } from '../actions/shop.js';
-import { addToCartIcon } from './my-icons.js';
-import { ButtonSharedStyles } from './button-shared-styles.js';
+import { addToCartIcon } from './site-icons.js';
+import { ButtonSharedStyles } from './shared-styles/button.js';
 
 class ShopProducts extends connect(store)(LitElement) {
   _render({_products}) {
