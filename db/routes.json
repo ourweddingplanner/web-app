@@ -1,5 +1,6 @@
 {
     "/pages/:id/aside": "/:resource/:id/aside",
     "/posts/:category": "/posts?category=:category",
-    "/messages/:user": "/messages?user=:user"
+    "/messages/:user": "/messages?participants_like=:user",
+    "/authenticate": "/users?_limit=1"
   }

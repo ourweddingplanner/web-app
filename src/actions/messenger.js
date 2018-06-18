@@ -38,22 +38,34 @@ export const getAllMessages = () => (dispatch, getState) => {
   // const user = 1234567812345678;
   const user = state.user;
 
+  // const messagesPreviewForUserURL = `messages/preview/user/${user.id}`;
+
+  // dispatch(selectResource(resourceType));
+  // dispatch(fetchContentIfNeeded(messagesPreviewForUserURL));
+
   // You could reformat the data in the right format as well:
-  const messages = MESSAGE_LIST.reduce((obj, message) => {
-    if ((message.recipientId === user.id) || (message.senderId === user.id)) {
-      obj[message.id] = message
-    }
+  // const messages = MESSAGE_LIST.reduce((obj, message) => {
+  //   if ((message.recipientId === user.id) || (message.senderId === user.id)) {
+  //     obj[message.id] = message
+  //   }
 
-    return obj;
-  }, {});
+  //   return obj;
+  // }, {});
 
-  // store.dispatch(selectResource(resourceType));
-  // dispatch(fetchContentIfNeeded(`messages/user/8765432187654321`));
+  const resourceType = "authenticate";
 
-  dispatch({
-    type: GET_MESSAGES,
-    messages
-  });
+  // if (state.content.contentByResource[messagesPreviewForUserURL] && state.content.contentByResource[messagesPreviewForUserURL].content) {
+  //   const messages = state.content.contentByResource[messagesPreviewForUserURL].content[0];
+  if (state.content.contentByResource[resourceType] && state.content.contentByResource[resourceType].content) {
+    const messages = state.content.contentByResource[resourceType].content[0].message_previews;
+
+    dispatch({
+      type: GET_MESSAGES,
+      messages
+    });
+  } else {
+    console.log("Messages not set in state");
+  }
 };
 
 // export const checkout = (messageId) => (dispatch) => {

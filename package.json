@@ -8,8 +8,7 @@
   "license": "BSD-3-Clause",
   "repository": "ourweddingplanner/web-app",
   "scripts": {
-    "start": "yarn db && yarn serve",
-    "serve": "nohup polymer serve &",
+    "start": "yarn db && polymer serve",
     "build": "npm run build:prpl-server && npm run build:static",
     "build:prpl-server": "polymer build --auto-base-path && rm -rf server/build && mv build server/ && renamer --find node_modules --replace node_assets 'server/build/**' && replace node_modules node_assets server/build -r -s",
     "build:static": "polymer build",
@@ -30,7 +29,7 @@
     "eslint-check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
     "precommit": "lint-staged",
     "pretest": "npm run lint",
-    "db": "nohup json-server --watch db/data.json --routes db/routes.json --port 3001 &"
+    "db": "nohup json-server --watch db/data.js --routes db/routes.json --port 3001 &"
   },
   "lint-staged": {
     "*.{js,ts}": [
@@ -45,6 +44,8 @@
     "@polymer/app-layout": "^3.0.0-pre.19",
     "@polymer/lit-element": "^0.5.1",
     "@webcomponents/webcomponentsjs": "^2.0.0",
+    "casual": "^1.5.19",
+    "faker": "^4.1.0",
     "lodash-es": "^4.17.10",
     "pwa-helpers": "^0.8.2",
     "redux": "^3.7.2",
@@ -56,6 +57,7 @@
   "devDependencies": {
     "axe-core": "^3.0.2",
     "chai": "^4.1.2",
+    "json-server": "^0.14.0",
     "mocha": "^5.2.0",
     "pixelmatch": "^4.0.2",
     "polymer-cli": "^1.7.2",

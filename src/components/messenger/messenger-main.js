@@ -22,7 +22,7 @@ export class MessengerMain extends LitElement {
       ${Object.keys(props._messages).map((key) => {
         const item = props._messages[key];
         return html`
-          <messenger-preview content="${item.content}" contact="${item.contact}" recipient="${item.recipient}" sender="${item.sender}" timestamp="${item.timestamp}" user="${props._user}"></messenger-preview>
+          <messenger-preview content="${item.content}" participants="${item.participants}" recipient="${item.recipient}" sender="${item.sender}" timestamp="${item.timestamp}" user="${props._user}"></messenger-preview>
         `
       })}
       <messenger-footer></messenger-footer>
